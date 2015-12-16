@@ -13,6 +13,7 @@
 		491FE7CA1C21D6CD004F8139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7C91C21D6CD004F8139 /* Assets.xcassets */; };
 		491FE7CD1C21D6CD004F8139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7CB1C21D6CD004F8139 /* LaunchScreen.storyboard */; };
 		491FE7D51C21D83A004F8139 /* starwars.csv in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7D41C21D83A004F8139 /* starwars.csv */; };
+		491FE7D81C21D93A004F8139 /* StarwarsCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FE7D71C21D93A004F8139 /* StarwarsCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		491FE7CC1C21D6CD004F8139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491FE7CE1C21D6CD004F8139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491FE7D41C21D83A004F8139 /* starwars.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = starwars.csv; sourceTree = "<group>"; };
+		491FE7D71C21D93A004F8139 /* StarwarsCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarwarsCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		491FE7C11C21D6CD004F8139 /* starwars-characters */ = {
 			isa = PBXGroup;
 			children = (
+				491FE7D61C21D91F004F8139 /* Model */,
 				491FE7C21C21D6CD004F8139 /* AppDelegate.swift */,
 				491FE7C41C21D6CD004F8139 /* ViewController.swift */,
 				491FE7C61C21D6CD004F8139 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				491FE7D41C21D83A004F8139 /* starwars.csv */,
 			);
 			path = "starwars-characters";
+			sourceTree = "<group>";
+		};
+		491FE7D61C21D91F004F8139 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				491FE7D71C21D93A004F8139 /* StarwarsCharacter.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491FE7D81C21D93A004F8139 /* StarwarsCharacter.swift in Sources */,
 				491FE7C51C21D6CD004F8139 /* ViewController.swift in Sources */,
 				491FE7C31C21D6CD004F8139 /* AppDelegate.swift in Sources */,
 			);
