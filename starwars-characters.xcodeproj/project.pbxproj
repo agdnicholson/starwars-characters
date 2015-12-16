@@ -12,6 +12,7 @@
 		491FE7C81C21D6CD004F8139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7C61C21D6CD004F8139 /* Main.storyboard */; };
 		491FE7CA1C21D6CD004F8139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7C91C21D6CD004F8139 /* Assets.xcassets */; };
 		491FE7CD1C21D6CD004F8139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7CB1C21D6CD004F8139 /* LaunchScreen.storyboard */; };
+		491FE7D51C21D83A004F8139 /* starwars.csv in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7D41C21D83A004F8139 /* starwars.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		491FE7C91C21D6CD004F8139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491FE7CC1C21D6CD004F8139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491FE7CE1C21D6CD004F8139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491FE7D41C21D83A004F8139 /* starwars.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = starwars.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				491FE7C91C21D6CD004F8139 /* Assets.xcassets */,
 				491FE7CB1C21D6CD004F8139 /* LaunchScreen.storyboard */,
 				491FE7CE1C21D6CD004F8139 /* Info.plist */,
+				491FE7D41C21D83A004F8139 /* starwars.csv */,
 			);
 			path = "starwars-characters";
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				491FE7CD1C21D6CD004F8139 /* LaunchScreen.storyboard in Resources */,
+				491FE7D51C21D83A004F8139 /* starwars.csv in Resources */,
 				491FE7CA1C21D6CD004F8139 /* Assets.xcassets in Resources */,
 				491FE7C81C21D6CD004F8139 /* Main.storyboard in Resources */,
 			);
