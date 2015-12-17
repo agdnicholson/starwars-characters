@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-nR-0gh">
-                                <rect key="frame" x="0.0" y="115" width="600" height="485"/>
+                                <rect key="frame" x="0.0" y="121" width="600" height="479"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VvE-HN-ze4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvE-HN-ze4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="S5L-Yb-eMg"/>
@@ -38,7 +38,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Liw-Wv-ZnN" customClass="StarWarsCharacterCell" customModule="starwars_characters" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SWCharCell" id="Liw-Wv-ZnN" customClass="SWCharCell" customModule="starwars_characters" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -79,6 +79,9 @@
                             </collectionView>
                             <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-kF-wHe">
                                 <rect key="frame" x="0.0" y="71" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="9qB-49-Q2p"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -87,26 +90,35 @@
                             <constraint firstItem="VvE-HN-ze4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0v7-PW-H7u"/>
                             <constraint firstItem="VvE-HN-ze4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="27w-Ji-2tN"/>
                             <constraint firstItem="VZl-nR-0gh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Jv-v1-jum"/>
-                            <constraint firstItem="bLn-1D-Chj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="7wF-ep-5NE"/>
-                            <constraint firstItem="bLn-1D-Chj" firstAttribute="top" secondItem="t1a-kF-wHe" secondAttribute="bottom" constant="20" id="AqC-hn-Bin"/>
+                            <constraint firstItem="bLn-1D-Chj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="7wF-ep-5NE"/>
+                            <constraint firstItem="bLn-1D-Chj" firstAttribute="top" secondItem="t1a-kF-wHe" secondAttribute="bottom" constant="10" id="AqC-hn-Bin"/>
                             <constraint firstItem="t1a-kF-wHe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Htw-my-EUx"/>
                             <constraint firstAttribute="trailing" secondItem="t1a-kF-wHe" secondAttribute="trailing" id="MpA-0n-hr0"/>
                             <constraint firstItem="t1a-kF-wHe" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="bottom" id="OCF-zr-LjN"/>
-                            <constraint firstItem="bLn-1D-Chj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="QIp-64-EJu"/>
+                            <constraint firstItem="bLn-1D-Chj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="QIp-64-EJu"/>
+                            <constraint firstItem="VZl-nR-0gh" firstAttribute="top" secondItem="t1a-kF-wHe" secondAttribute="bottom" id="Sz4-xJ-Tin"/>
                             <constraint firstItem="t1a-kF-wHe" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="bottom" id="XPO-n3-YbL"/>
                             <constraint firstItem="VZl-nR-0gh" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="bottom" id="d3j-H0-wFL"/>
                             <constraint firstAttribute="trailing" secondItem="VZl-nR-0gh" secondAttribute="trailing" id="daK-oU-s9V"/>
                             <constraint firstAttribute="trailing" secondItem="VvE-HN-ze4" secondAttribute="trailing" id="enx-kd-Kb3"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLn-1D-Chj" secondAttribute="bottom" constant="20" id="gkc-GA-iWB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bLn-1D-Chj" secondAttribute="bottom" constant="10" id="gkc-GA-iWB"/>
+                            <constraint firstItem="t1a-kF-wHe" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="bottom" id="kBN-Ae-KnG"/>
+                            <constraint firstItem="bLn-1D-Chj" firstAttribute="top" secondItem="t1a-kF-wHe" secondAttribute="bottom" constant="10" id="mVH-7v-h4Z"/>
                             <constraint firstItem="bLn-1D-Chj" firstAttribute="top" secondItem="t1a-kF-wHe" secondAttribute="bottom" id="sgU-LQ-ShW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VZl-nR-0gh" secondAttribute="bottom" id="v38-zL-0Tr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="XPO-n3-YbL"/>
+                                <exclude reference="d3j-H0-wFL"/>
+                                <exclude reference="mVH-7v-h4Z"/>
+                                <exclude reference="sgU-LQ-ShW"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="bLn-1D-Chj" id="w9H-dj-Jb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
