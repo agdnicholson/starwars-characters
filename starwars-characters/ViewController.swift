@@ -9,18 +9,22 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var searchbar: UISearchBar!
     
     var starwarsCharacters = [StarwarsCharacter]()
+    var filteredSWCharacters = [StarwarsCharacter]()
     var musicPlayer: AVAudioPlayer!
+    var inSearchMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
-        
+        searchbar.delegate = self
+        searchbar.returnKeyType = UIReturnKeyType.Done
         initAudio()
         parseStarwarsCSV()
     }
@@ -63,7 +67,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SWCharCell", forIndexPath: indexPath) as? SWCharCell {
             
-            let starWarsCharacter = starwarsCharacters[indexPath.row]
+            let starWarsCharacter: StarwarsCharacter!
+            
+            if inSearchMode {
+                starWarsCharacter = filteredSWCharacters[indexPath.row]
+            } else {
+                starWarsCharacter = starwarsCharacters[indexPath.row]
+            }
+            
             cell.configureCell(starWarsCharacter)
             return cell
         } else {
@@ -76,6 +87,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if inSearchMode {
+            return filteredSWCharacters.count
+        }
+        
         return starwarsCharacters.count
     }
     
@@ -96,6 +111,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer.play()
             sender.alpha = 1.0
         }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            
+            filteredSWCharacters = starwarsCharacters.filter({$0.loweredName.rangeOfString(lower) != nil})
+        }
+        
+        collection.reloadData()
     }
 }
 

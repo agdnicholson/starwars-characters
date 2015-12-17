@@ -10,6 +10,7 @@ import Foundation
 
 class StarwarsCharacter {
     private var _name: String!
+    private var _loweredName: String!
     private var _swCharId: Int!
     
     var name: String {
@@ -20,8 +21,13 @@ class StarwarsCharacter {
         return _swCharId
     }
     
+    var loweredName: String {
+        return _loweredName
+    }
+    
     init(name: String, swCharId: Int){
         self._name = name
         self._swCharId = swCharId
+        self._loweredName = name.lowercaseString
     }
 }

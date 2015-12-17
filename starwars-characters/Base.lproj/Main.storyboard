@@ -39,7 +39,7 @@
                                         <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-aI-erJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-aI-erJ">
                                         <rect key="frame" x="211" y="41" width="179" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="179" id="cXQ-LY-Hhq"/>
@@ -121,7 +121,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-kF-wHe">
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" placeholder="Search for a Star Wars Character" translatesAutoresizingMaskIntoConstraints="NO" id="t1a-kF-wHe">
                                 <rect key="frame" x="0.0" y="71" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="9qB-49-Q2p"/>
@@ -162,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="bLn-1D-Chj" id="w9H-dj-Jb2"/>
+                        <outlet property="searchbar" destination="t1a-kF-wHe" id="X9w-iM-UbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
