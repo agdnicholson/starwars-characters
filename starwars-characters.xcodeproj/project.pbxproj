@@ -17,6 +17,7 @@
 		491FE7DB1C21E905004F8139 /* SWCharCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FE7DA1C21E905004F8139 /* SWCharCell.swift */; };
 		491FE7DD1C21F1BA004F8139 /* swtheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7DC1C21F1BA004F8139 /* swtheme.mp3 */; };
 		494B7B671C22DA2D00D8DCFC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7B661C22DA2D00D8DCFC /* csv.swift */; };
+		494B7B6B1C22DE1B00D8DCFC /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		491FE7DA1C21E905004F8139 /* SWCharCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWCharCell.swift; sourceTree = "<group>"; };
 		491FE7DC1C21F1BA004F8139 /* swtheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swtheme.mp3; sourceTree = "<group>"; };
 		494B7B661C22DA2D00D8DCFC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				491FE7D41C21D83A004F8139 /* starwars.csv */,
+				494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				491FE7D51C21D83A004F8139 /* starwars.csv in Resources */,
 				491FE7CA1C21D6CD004F8139 /* Assets.xcassets in Resources */,
 				491FE7C81C21D6CD004F8139 /* Main.storyboard in Resources */,
+				494B7B6B1C22DE1B00D8DCFC /* Starjedi.ttf in Resources */,
 				491FE7DD1C21F1BA004F8139 /* swtheme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

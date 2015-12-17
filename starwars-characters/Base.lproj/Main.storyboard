@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Starjedi.ttf">
+            <string>StarJedi</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,9 +28,48 @@
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvE-HN-ze4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Wars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-yd-jTz">
+                                        <rect key="frame" x="189" y="3" width="222" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="222" id="DaQ-WZ-sZc"/>
+                                            <constraint firstAttribute="height" constant="36" id="atf-LO-KRi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-aI-erJ">
+                                        <rect key="frame" x="211" y="41" width="179" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="179" id="cXQ-LY-Hhq"/>
+                                            <constraint firstAttribute="height" constant="21" id="zrN-iX-vsV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjQ-fw-sNC">
+                                        <rect key="frame" x="562" y="19" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="CT2-Ai-J7R"/>
+                                            <constraint firstAttribute="height" constant="30" id="Jze-FW-ivl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="music-icon"/>
+                                        <connections>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7f4-0u-Ath"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="SjQ-fw-sNC" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="top" constant="19" id="0Jd-X5-gwn"/>
+                                    <constraint firstItem="u0Q-yd-jTz" firstAttribute="centerX" secondItem="VvE-HN-ze4" secondAttribute="centerX" id="D4d-YV-2XJ"/>
+                                    <constraint firstItem="u0Q-yd-jTz" firstAttribute="top" secondItem="VvE-HN-ze4" secondAttribute="top" constant="3" id="JXz-kh-DMT"/>
                                     <constraint firstAttribute="height" constant="70" id="S5L-Yb-eMg"/>
+                                    <constraint firstItem="s8s-aI-erJ" firstAttribute="top" secondItem="u0Q-yd-jTz" secondAttribute="bottom" constant="2" id="aVx-GL-t5v"/>
+                                    <constraint firstAttribute="trailing" secondItem="SjQ-fw-sNC" secondAttribute="trailing" constant="8" id="aov-1K-jPZ"/>
+                                    <constraint firstItem="s8s-aI-erJ" firstAttribute="centerX" secondItem="VvE-HN-ze4" secondAttribute="centerX" id="sUf-Nw-0BF"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-1D-Chj">
@@ -52,7 +96,7 @@
                                                     <rect key="frame" x="0.0" y="179" width="220" height="41"/>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="wa7-am-hiq"/>
+                                                        <constraint firstAttribute="height" constant="30" id="wa7-am-hiq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,5 +172,6 @@
     <resources>
         <image name="3" width="543" height="470"/>
         <image name="background" width="1920" height="1080"/>
+        <image name="music-icon" width="256" height="256"/>
     </resources>
 </document>
