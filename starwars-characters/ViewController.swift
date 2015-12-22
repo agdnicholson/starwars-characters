@@ -84,6 +84,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let starwarsCharacter: StarwarsCharacter!
+        
+        if inSearchMode {
+            starwarsCharacter = filteredSWCharacters[indexPath.row]
+        } else {
+            starwarsCharacter = starwarsCharacters[indexPath.row]
+        }
+        
+        performSegueWithIdentifier("SWCharDetailVC", sender: starwarsCharacter)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -129,6 +138,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         collection.reloadData()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SWCharDetailVC" {
+            if let detailsVC = segue.destinationViewController as? SWCharDetailVC {
+                if let swCharacter = sender as? StarwarsCharacter {
+                     detailsVC.swCharacter = swCharacter
+                }
+            }
+        }
     }
 }
 

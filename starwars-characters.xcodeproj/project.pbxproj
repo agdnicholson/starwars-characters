@@ -18,6 +18,7 @@
 		491FE7DD1C21F1BA004F8139 /* swtheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 491FE7DC1C21F1BA004F8139 /* swtheme.mp3 */; };
 		494B7B671C22DA2D00D8DCFC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7B661C22DA2D00D8DCFC /* csv.swift */; };
 		494B7B6B1C22DE1B00D8DCFC /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */; };
+		49CF36781C2833D900BEE373 /* SWCharDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CF36771C2833D900BEE373 /* SWCharDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		491FE7DC1C21F1BA004F8139 /* swtheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swtheme.mp3; sourceTree = "<group>"; };
 		494B7B661C22DA2D00D8DCFC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		49CF36771C2833D900BEE373 /* SWCharDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWCharDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		491FE7C11C21D6CD004F8139 /* starwars-characters */ = {
 			isa = PBXGroup;
 			children = (
+				49CF36761C2833B700BEE373 /* Controller */,
 				491FE7D61C21D91F004F8139 /* Model */,
 				491FE7D91C21E8D6004F8139 /* View */,
 				494B7B691C22DA8100D8DCFC /* Resources */,
@@ -92,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				491FE7DA1C21E905004F8139 /* SWCharCell.swift */,
-				491FE7C41C21D6CD004F8139 /* ViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -112,6 +114,15 @@
 				494B7B6A1C22DE1B00D8DCFC /* Starjedi.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		49CF36761C2833B700BEE373 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				491FE7C41C21D6CD004F8139 /* ViewController.swift */,
+				49CF36771C2833D900BEE373 /* SWCharDetailVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 				491FE7DB1C21E905004F8139 /* SWCharCell.swift in Sources */,
 				491FE7C31C21D6CD004F8139 /* AppDelegate.swift in Sources */,
 				494B7B671C22DA2D00D8DCFC /* csv.swift in Sources */,
+				49CF36781C2833D900BEE373 /* SWCharDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
